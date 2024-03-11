@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>Starward</RootNamespace>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Platforms>x86;x64;ARM64</Platforms>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+		<UseWinUI>true</UseWinUI>
+		<EnableMsixTooling>true</EnableMsixTooling>
+		<WindowsPackageType>None</WindowsPackageType>
+		<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+		<DefineConstants>DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+		<ApplicationIcon>logo.ico</ApplicationIcon>
+		<UseRidGraph>true</UseRidGraph>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Labs.WinUI.SegmentedControl" Version="0.0.3" />
+		<PackageReference Include="CommunityToolkit.Labs.WinUI.TransitionHelper" Version="0.0.1" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="CommunityToolkit.WinUI.UI.Behaviors" Version="7.1.2" />
+		<PackageReference Include="CommunityToolkit.WinUI.UI.Controls.Core" Version="7.1.2" />
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="H.NotifyIcon.WinUI" Version="2.0.124" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.1.1" />
+		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.7" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.240211001" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.3233" />
+		<PackageReference Include="MiniExcel" Version="1.31.3" />
+		<PackageReference Include="NuGet.Versioning" Version="6.9.1" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="Starward.Assets" Version="0.4.7" />
+		<PackageReference Include="Starward.NativeLib" Version="0.2.1" />
+		<PackageReference Include="Vanara.PInvoke.ComCtl32" Version="3.4.17" />
+		<PackageReference Include="Vanara.PInvoke.DwmApi" Version="3.4.17" />
+		<Manifest Include="$(ApplicationManifest)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Starward.Core\Starward.Core.csproj" />
+		<ProjectReference Include="..\Starward.Language\Starward.Language.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="Assets\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="resource\Images\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="resource\Images\logo.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Assets Remove="Services\InstallGame\LvmengInstallGameService.cs" />
+	</ItemGroup>
+
+</Project>

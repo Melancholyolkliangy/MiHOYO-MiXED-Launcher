@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Starward": {
+      "commandName": "Project",
+      "commandLineArgs": "download --biz lm_cn --loc D:\\\\Mihyo\\ --lang 15 "
+    }
+  }
+}
