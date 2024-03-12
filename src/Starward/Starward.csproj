@@ -68,10 +68,35 @@
 	  <None Update="resource\Images\logo.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
+	  <None Update="resource\Images\lumin.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Assets Remove="Services\InstallGame\LvmengInstallGameService.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Assets Remove="Helpers\FileHelper.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Assets Remove="Controls\TitleBarGameIcon\TitleBarGameIconYS - 复制.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Assets Remove="Controls\TitleBarGameIcon\TitleBarGameIconYS - 复制.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Controls\TitleBarGameIcon\TitleBarGameIconYS - 复制.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="Controls\TitleBarGameIcon\TitleBarGameIconYS - 复制.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	  </Page>
 	</ItemGroup>
 
 </Project>

@@ -48,19 +48,20 @@ public sealed partial class MainWindow : WindowEx
         Current = this;
         this.InitializeComponent();
         InitializeMainWindow();
+        //App.Current.InitializeSystemTray();
 #if DEBUG
-        if (Debugger.IsAttached)
-        {
-            Task.Run(async () =>
-            {
-                await Task.Delay(1000);
-                DispatcherQueue.TryEnqueue(App.Current.InitializeSystemTray);
-            });
-        }
-        else
-        {
-            App.Current.InitializeSystemTray();
-        }
+        //if (Debugger.IsAttached)
+        //{
+        //    Task.Run(async () =>
+        //    {
+        //        await Task.Delay(1000);
+        //        DispatcherQueue.TryEnqueue(App.Current.InitializeSystemTray);
+        //    });
+        //}
+        //else
+        //{
+        //    App.Current.InitializeSystemTray();
+        //}
 #else
         App.Current.InitializeSystemTray();
 #endif

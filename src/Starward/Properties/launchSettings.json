@@ -1,8 +1,19 @@
 {
   "profiles": {
-    "Starward": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Starward不带参数": {
+      "commandName": "Project"
+    },
+    "Starward下载": {
       "commandName": "Project",
-      "commandLineArgs": "download --biz lm_cn --loc D:\\\\Mihyo\\ --lang 15 "
+      "commandLineArgs": "download --biz lm_cn --loc D:\\\\Mihoyo\\ --lang 15 "
+    },
+    "Starward卸载": {
+      "commandName": "Project",
+      "commandLineArgs": "uninstall --biz lm_cn --loc D:\\\\Mihoyo\\ --steps 15"
     }
   }
 }

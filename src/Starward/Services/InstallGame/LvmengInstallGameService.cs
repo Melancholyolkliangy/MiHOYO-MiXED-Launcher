@@ -14,7 +14,7 @@ internal class LvmengInstallGameService : InstallGameService
 {
 
 
-    public override GameBiz CurrentGame => GameBiz.LvMeng;
+    public override GameBiz CurrentGame => GameBiz.LuMin;
 
 
     public LvmengInstallGameService(ILogger<StarRailInstallGameService> logger, GameResourceService gameResourceService, LauncherClient launcherClient, HttpClient httpClient)

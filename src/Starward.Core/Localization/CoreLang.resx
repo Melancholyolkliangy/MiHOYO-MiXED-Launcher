@@ -229,4 +229,7 @@
   <data name="GachaType_ChronicledWish" xml:space="preserve">
     <value>Chronicled Wish</value>
   </data>
+  <data name="Game_Lumin" xml:space="preserve">
+    <value>Lumin</value>
+  </data>
 </root>

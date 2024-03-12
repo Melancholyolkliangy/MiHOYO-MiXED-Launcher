@@ -196,6 +196,15 @@ namespace Starward.Core.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Lumin 的本地化字符串。
+        /// </summary>
+        internal static string Game_Lumin {
+            get {
+                return ResourceManager.GetString("Game_Lumin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Bilibili Server 的本地化字符串。
         /// </summary>
         internal static string GameServer_BilibiliServer {

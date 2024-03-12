@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.UI.Xaml.Shapes;
 using Starward.Core;
 using Starward.Core.Launcher;
+using Starward.Helpers;
 using Starward.SevenZip;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,9 @@ using System.Security.Cryptography;
 using System.Text.Json.Nodes;
 using System.Threading;
 using System.Threading.Tasks;
+using static CommunityToolkit.WinUI.UI.Animations.Expressions.ExpressionValues;
+using static Vanara.PInvoke.Kernel32;
+using Path = System.IO.Path;
 
 namespace Starward.Services.InstallGame;
 
@@ -942,18 +947,17 @@ internal abstract class InstallGameService
                 using var zip = new ZipArchive(fs, ZipArchiveMode.Read, true);
                 foreach (var item in zip.Entries)
                 {
-                    if ((item.ExternalAttributes & 0x10) > 0)
+                    var target = Path.Combine(InstallPath, item.FullName);
+                    if (FileHelper.IsFile(target))
                     {
-                        var target = Path.Combine(InstallPath, item.FullName);
-                        Directory.CreateDirectory(target);
-                    }
-                    else
-                    {
-                        var target = Path.Combine(InstallPath, item.FullName);
                         Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                         item.ExtractToFile(target, true);
                         progressBytes += item.CompressedLength;
                         sum += item.CompressedLength;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(target);
                     }
                 }
                 progressBytes += fs.Length - sum;

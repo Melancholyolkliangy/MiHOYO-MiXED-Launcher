@@ -30,7 +30,7 @@
             <Grid Name="Grid_BannerAndPost"
                   Width="432"
                   Margin="40,40,40,0"
-                  HorizontalAlignment="Left"
+                  HorizontalAlignment="Right"
                   VerticalAlignment="Center"
                   IsHitTestVisible="False"
                   Opacity="0"

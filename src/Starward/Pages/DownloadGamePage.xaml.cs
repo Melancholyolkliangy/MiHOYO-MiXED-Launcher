@@ -67,7 +67,7 @@ public sealed partial class DownloadGamePage : PageBase
             GameBiz.Honkai3rd => AppConfig.GetService<Honkai3rdInstallGameService>(),
             GameBiz.GenshinImpact => AppConfig.GetService<GenshinInstallGameService>(),
             GameBiz.StarRail => AppConfig.GetService<StarRailInstallGameService>(),
-            GameBiz.LvMeng => AppConfig.GetService<LvmengInstallGameService>(),
+            GameBiz.LuMin => AppConfig.GetService<LvmengInstallGameService>(),
             _ => null!,
         };
     }

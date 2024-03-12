@@ -81,6 +81,7 @@ internal class GameResourceService
             {
                 GameBiz.StarRail => "StarRail.exe",
                 GameBiz.Honkai3rd => "BH3.exe",
+                GameBiz.LuMin => "act.exe",
                 _ => throw new ArgumentOutOfRangeException($"Unknown region {biz}"),
             },
         };

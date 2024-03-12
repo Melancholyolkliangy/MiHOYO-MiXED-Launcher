@@ -230,6 +230,7 @@ public sealed partial class MainPage : PageBase
         GameIcon_BH3.Select(CurrentGameBiz);
         GameIcon_YS.Select(CurrentGameBiz);
         GameIcon_SR.Select(CurrentGameBiz);
+        GameIcon_LM.Select(CurrentGameBiz);
     }
 
 

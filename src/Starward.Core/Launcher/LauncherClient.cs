@@ -56,7 +56,7 @@ public class LauncherClient
             GameBiz.bh3_kr => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/content?filter_adv=false&key=PRg571Xh&language=ko-kr&launcher_id=11",
             GameBiz.bh3_jp => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/content?filter_adv=false&key=ojevZ0EyIyZNCy4n&language=ja-jp&launcher_id=19",
             GameBiz.nap_cn => "https://nap-launcher-static.mihoyo.com/nap_cn/mdk/launcher/api/content?filter_adv=false&key=9HEb62Pw0qKYX4Mw&language=zh-cn&launcher_id=15",
-            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/Catalog.json",
+            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/ContentCatalog.json",
             //GameBiz.nap_global => "",
             _ => throw new ArgumentOutOfRangeException($"Unknown region {biz}"),
         };

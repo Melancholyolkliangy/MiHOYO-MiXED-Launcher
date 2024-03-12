@@ -114,7 +114,7 @@ public enum GameBiz
     /// <summary>
     /// Lvmeng ACT Game
     /// </summary>
-    LvMeng = 50,
+    LuMin = 50,
 
     lm_cn = 51,
 }
