@@ -461,7 +461,7 @@
                       CornerRadius="20"
                       Shadow="{StaticResource ThemeShadow}"
                       Translation="0,0,16">
-                    <ComboBox Name="ComboBox_GameAccount"
+                    <!--<ComboBox Name="ComboBox_GameAccount"
                               Height="40"
                               MinWidth="200"
                               BorderThickness="0"
@@ -502,11 +502,11 @@
                                 </Grid>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
-                    </ComboBox>
+                    </ComboBox>-->
                 </Grid>
 
                 <!--  change account  -->
-                <Grid Background="{ThemeResource CustomAcrylicBrush}"
+                <!--<Grid Background="{ThemeResource CustomAcrylicBrush}"
                       CornerRadius="20"
                       Shadow="{StaticResource ThemeShadow}"
                       Translation="0,0,16">
@@ -613,7 +613,7 @@
                             </Flyout>
                         </Button.Flyout>
                     </Button>
-                </Grid>
+                </Grid>-->
 
 
             </StackPanel>

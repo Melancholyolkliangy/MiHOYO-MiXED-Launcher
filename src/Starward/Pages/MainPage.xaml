@@ -67,7 +67,7 @@
                         <FontIcon Glyph="&#xE789;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>-->
-                <NavigationViewItem Name="NavigationViewItem_GameSetting"
+                <!--<NavigationViewItem Name="NavigationViewItem_GameSetting"
                                     Content="{x:Bind lang:Lang.LauncherPage_GameSetting}"
                                     Tag="GameSettingPage">
                     <NavigationViewItem.Icon>
@@ -97,7 +97,7 @@
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE8C7;" />
                     </NavigationViewItem.Icon>
-                </NavigationViewItem>
+                </NavigationViewItem>-->
             </NavigationView.MenuItems>
 
             <NavigationView.FooterMenuItems>
@@ -166,7 +166,7 @@
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Orientation="Horizontal">
-                <sct:TitleBarGameIconBH3 x:Name="GameIcon_BH3"
+                <!--<sct:TitleBarGameIconBH3 x:Name="GameIcon_BH3"
                                          Width="36"
                                          Height="36"
                                          Margin="4,0,4,0"
@@ -180,7 +180,7 @@
                                         Width="36"
                                         Height="36"
                                         Margin="4,0,4,0"
-                                        Command="{x:Bind ChangeGameBizCommand}" />
+                                        Command="{x:Bind ChangeGameBizCommand}" />-->
                 <sct:TitleBarGameIconLM x:Name="GameIcon_LM"
                                         Width="36"
                                         Height="36"
@@ -190,7 +190,7 @@
                         Margin="4,0,4,0"
                         Background="{ThemeResource DateTimePickerFlyoutButtonBackgroundPointerOver}"
                         CornerRadius="16">
-                    <Button Height="32"
+                    <!--<Button Height="32"
                             MinWidth="68"
                             Padding="0"
                             BorderThickness="0"
@@ -202,7 +202,7 @@
                         <Button.Flyout>
                             <Flyout>
                                 <StackPanel MaxWidth="220" Spacing="4">
-                                    <!--  如何切换游戏服务器？  -->
+                                    --><!--  如何切换游戏服务器？  --><!--
                                     <TextBlock Name="TextBlock_SwitchRegionTitle"
                                                FontWeight="SemiBold"
                                                Text="{x:Bind lang:Lang.MainPage_HowToSwitchGameRegion}" />
@@ -214,7 +214,7 @@
                                 </StackPanel>
                             </Flyout>
                         </Button.Flyout>
-                    </Button>
+                    </Button>-->
                 </Border>
             </StackPanel>
         </Grid>

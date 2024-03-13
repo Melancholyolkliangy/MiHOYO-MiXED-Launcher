@@ -145,10 +145,10 @@ public sealed partial class SelectGamePage : PageBase
 
     private void InitializeGameComboBox()
     {
-        ComboBox_Game.Items.Clear();
-        ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_cn.ToGameName(), Tag = GameBiz.Honkai3rd });
-        ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cn.ToGameName(), Tag = GameBiz.GenshinImpact });
-        ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_cn.ToGameName(), Tag = GameBiz.StarRail });
+        //ComboBox_Game.Items.Clear();
+        //ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_cn.ToGameName(), Tag = GameBiz.Honkai3rd });
+        //ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cn.ToGameName(), Tag = GameBiz.GenshinImpact });
+        //ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_cn.ToGameName(), Tag = GameBiz.StarRail });
         ComboBox_Game.Items.Add(new ComboBoxItem { Content = GameBiz.lm_cn.ToGameName(), Tag = GameBiz.LuMin });
     }
 
@@ -160,28 +160,28 @@ public sealed partial class SelectGamePage : PageBase
         ComboBox_GameServer.Items.Clear();
         if (e.AddedItems.FirstOrDefault() is ComboBoxItem item)
         {
-            if (item.Tag is GameBiz.Honkai3rd)
-            {
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_cn.ToGameServer(), Tag = GameBiz.bh3_cn });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_global.ToGameServer(), Tag = GameBiz.bh3_global });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_jp.ToGameServer(), Tag = GameBiz.bh3_jp });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_kr.ToGameServer(), Tag = GameBiz.bh3_kr });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_overseas.ToGameServer(), Tag = GameBiz.bh3_overseas });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_tw.ToGameServer(), Tag = GameBiz.bh3_tw });
-            }
-            if (item.Tag is GameBiz.GenshinImpact)
-            {
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cn.ToGameServer(), Tag = GameBiz.hk4e_cn });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_global.ToGameServer(), Tag = GameBiz.hk4e_global });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cloud.ToGameServer(), Tag = GameBiz.hk4e_cloud });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_bilibili.ToGameServer(), Tag = GameBiz.hk4e_bilibili });
-            }
-            if (item.Tag is GameBiz.StarRail)
-            {
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_cn.ToGameServer(), Tag = GameBiz.hkrpg_cn });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_global.ToGameServer(), Tag = GameBiz.hkrpg_global });
-                ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_bilibili.ToGameServer(), Tag = GameBiz.hkrpg_bilibili });
-            }
+            //if (item.Tag is GameBiz.Honkai3rd)
+            //{
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_cn.ToGameServer(), Tag = GameBiz.bh3_cn });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_global.ToGameServer(), Tag = GameBiz.bh3_global });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_jp.ToGameServer(), Tag = GameBiz.bh3_jp });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_kr.ToGameServer(), Tag = GameBiz.bh3_kr });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_overseas.ToGameServer(), Tag = GameBiz.bh3_overseas });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.bh3_tw.ToGameServer(), Tag = GameBiz.bh3_tw });
+            //}
+            //if (item.Tag is GameBiz.GenshinImpact)
+            //{
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cn.ToGameServer(), Tag = GameBiz.hk4e_cn });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_global.ToGameServer(), Tag = GameBiz.hk4e_global });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_cloud.ToGameServer(), Tag = GameBiz.hk4e_cloud });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hk4e_bilibili.ToGameServer(), Tag = GameBiz.hk4e_bilibili });
+            //}
+            //if (item.Tag is GameBiz.StarRail)
+            //{
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_cn.ToGameServer(), Tag = GameBiz.hkrpg_cn });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_global.ToGameServer(), Tag = GameBiz.hkrpg_global });
+            //    ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.hkrpg_bilibili.ToGameServer(), Tag = GameBiz.hkrpg_bilibili });
+            //}
             if(item.Tag is GameBiz.LuMin)
             {
                 ComboBox_GameServer.Items.Add(new ComboBoxItem { Content = GameBiz.lm_cn.ToGameServer(), Tag = GameBiz.lm_cn });
