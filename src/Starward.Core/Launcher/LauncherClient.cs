@@ -56,7 +56,7 @@ public class LauncherClient
             GameBiz.bh3_kr => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/content?filter_adv=false&key=PRg571Xh&language=ko-kr&launcher_id=11",
             GameBiz.bh3_jp => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/content?filter_adv=false&key=ojevZ0EyIyZNCy4n&language=ja-jp&launcher_id=19",
             GameBiz.nap_cn => "https://nap-launcher-static.mihoyo.com/nap_cn/mdk/launcher/api/content?filter_adv=false&key=9HEb62Pw0qKYX4Mw&language=zh-cn&launcher_id=15",
-            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/ContentCatalog.json",
+            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/PCLauncher/ContentCatalog.json",
             //GameBiz.nap_global => "",
             _ => throw new ArgumentOutOfRangeException($"Unknown region {biz}"),
         };
@@ -98,7 +98,7 @@ public class LauncherClient
             GameBiz.bh3_kr => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/resource?channel_id=1&key=PRg571Xh&launcher_id=11&sub_channel_id=1",
             GameBiz.bh3_jp => $"https://sdk-os-static.mihoyo.com/bh3_global/mdk/launcher/api/resource?channel_id=1&key=ojevZ0EyIyZNCy4n&launcher_id=19&sub_channel_id=6",
             GameBiz.nap_cn => "https://nap-launcher-static.mihoyo.com/nap_cn/mdk/launcher/api/resource?channel_id=1&key=9HEb62Pw0qKYX4Mw&launcher_id=15&sub_channel_id=1",
-            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/ResourceCatalog.json",
+            GameBiz.lm_cn => "https://qiantan.zhuziplay.com/act_cdn/PCLauncher/ResourceCatalog.json",
             //GameBiz.nap_global => "",
             _ => throw new ArgumentOutOfRangeException($"Unknown region {biz}"),
         };
