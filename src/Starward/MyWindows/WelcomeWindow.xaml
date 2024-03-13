@@ -11,7 +11,7 @@
     <Grid Name="RootGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image HorizontalAlignment="Center"
                VerticalAlignment="Center"
-               Source="ms-appx:///Assets/Image/StartUpBG2.png"
+               Source="/resource/Images/BackGround.png"
                Stretch="UniformToFill" />
         <Frame Name="frame" />
     </Grid>

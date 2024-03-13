@@ -559,48 +559,48 @@ public sealed partial class MainPage : PageBase
         if (CurrentGameBiz.ToGame() is GameBiz.None)
         {
             NavigationViewItem_Launcher.Visibility = Visibility.Collapsed;
-            NavigationViewItem_GameSetting.Visibility = Visibility.Collapsed;
-            NavigationViewItem_Screenshot.Visibility = Visibility.Collapsed;
-            NavigationViewItem_GachaLog.Visibility = Visibility.Collapsed;
-            NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Collapsed;
-            NavigationViewItem_SelfQuery.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_GameSetting.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_Screenshot.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_GachaLog.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_SelfQuery.Visibility = Visibility.Collapsed;
         }
         else if (CurrentGameBiz.ToGame() is GameBiz.Honkai3rd)
         {
             NavigationViewItem_Launcher.Visibility = Visibility.Visible;
-            NavigationViewItem_GameSetting.Visibility = Visibility.Visible;
-            NavigationViewItem_Screenshot.Visibility = Visibility.Visible;
-            NavigationViewItem_GachaLog.Visibility = Visibility.Collapsed;
-            NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Collapsed;
-            NavigationViewItem_SelfQuery.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_GameSetting.Visibility = Visibility.Visible;
+            //NavigationViewItem_Screenshot.Visibility = Visibility.Visible;
+            //NavigationViewItem_GachaLog.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Collapsed;
+            //NavigationViewItem_SelfQuery.Visibility = Visibility.Collapsed;
         }
         else
         {
             NavigationViewItem_Launcher.Visibility = Visibility.Visible;
-            NavigationViewItem_GameSetting.Visibility = Visibility.Visible;
-            NavigationViewItem_Screenshot.Visibility = Visibility.Visible;
-            NavigationViewItem_GachaLog.Visibility = Visibility.Visible;
-            NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Visible;
-            NavigationViewItem_SelfQuery.Visibility = Visibility.Visible;
+            //NavigationViewItem_GameSetting.Visibility = Visibility.Visible;
+            //NavigationViewItem_Screenshot.Visibility = Visibility.Visible;
+            //NavigationViewItem_GachaLog.Visibility = Visibility.Visible;
+            //NavigationViewItem_HoyolabToolbox.Visibility = Visibility.Visible;
+            //NavigationViewItem_SelfQuery.Visibility = Visibility.Visible;
         }
-        if (CurrentGameBiz.ToGame() is GameBiz.GenshinImpact)
-        {
-            // 祈愿记录
-            NavigationViewItem_GachaLog.Content = Lang.GachaLogService_WishRecords;
-        }
-        if (CurrentGameBiz.ToGame() is GameBiz.StarRail)
-        {
-            // 跃迁记录
-            NavigationViewItem_GachaLog.Content = Lang.GachaLogService_WarpRecords;
-        }
-        if (CurrentGameBiz.IsChinaServer())
-        {
-            NavigationViewItem_HoyolabToolbox.Content = Lang.HyperionToolbox;
-        }
-        if (CurrentGameBiz.IsGlobalServer())
-        {
-            NavigationViewItem_HoyolabToolbox.Content = Lang.HoYoLABToolbox;
-        }
+        //if (CurrentGameBiz.ToGame() is GameBiz.GenshinImpact)
+        //{
+        //    // 祈愿记录
+        //    NavigationViewItem_GachaLog.Content = Lang.GachaLogService_WishRecords;
+        //}
+        //if (CurrentGameBiz.ToGame() is GameBiz.StarRail)
+        //{
+        //    // 跃迁记录
+        //    NavigationViewItem_GachaLog.Content = Lang.GachaLogService_WarpRecords;
+        //}
+        //if (CurrentGameBiz.IsChinaServer())
+        //{
+        //    NavigationViewItem_HoyolabToolbox.Content = Lang.HyperionToolbox;
+        //}
+        //if (CurrentGameBiz.IsGlobalServer())
+        //{
+        //    NavigationViewItem_HoyolabToolbox.Content = Lang.HoYoLABToolbox;
+        //}
     }
 
 

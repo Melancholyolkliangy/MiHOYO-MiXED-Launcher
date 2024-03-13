@@ -860,10 +860,10 @@ public sealed partial class LauncherPage : PageBase
                 }
                 SelectGameAccount.Time = DateTime.Now;
                 _gameAccountService.SaveGameAccount(SelectGameAccount);
-                FontIcon_SaveGameAccount.Glyph = "\uE8FB";
+                //FontIcon_SaveGameAccount.Glyph = "\uE8FB";
                 _ = UpdateGameNoticesAlertAsync();
                 await Task.Delay(3000);
-                FontIcon_SaveGameAccount.Glyph = "\uE74E";
+                //FontIcon_SaveGameAccount.Glyph = "\uE74E";
             }
         }
         catch (Exception ex)
@@ -899,17 +899,17 @@ public sealed partial class LauncherPage : PageBase
         {
             if (TextBox_AccountUid is null)
             {
-                var ele1 = VisualTreeHelper.GetChild(AutoSuggestBox_Uid, 0);
-                var ele = VisualTreeHelper.GetChild(ele1, 0);
-                if (ele is TextBox textBox)
-                {
-                    TextBox_AccountUid = textBox;
-                    TextBox_AccountUid.InputScope = new InputScope { Names = { new InputScopeName { NameValue = InputScopeNameValue.Number } } };
-                    TextBox_AccountUid.BeforeTextChanging += (s, e) =>
-                    {
-                        e.Cancel = !e.NewText.All(x => char.IsDigit(x));
-                    };
-                }
+                //var ele1 = VisualTreeHelper.GetChild(AutoSuggestBox_Uid, 0);
+                //var ele = VisualTreeHelper.GetChild(ele1, 0);
+                //if (ele is TextBox textBox)
+                //{
+                //    TextBox_AccountUid = textBox;
+                //    TextBox_AccountUid.InputScope = new InputScope { Names = { new InputScopeName { NameValue = InputScopeNameValue.Number } } };
+                //    TextBox_AccountUid.BeforeTextChanging += (s, e) =>
+                //    {
+                //        e.Cancel = !e.NewText.All(x => char.IsDigit(x));
+                //    };
+                //}
             }
         }
         catch { }
@@ -921,7 +921,7 @@ public sealed partial class LauncherPage : PageBase
         try
         {
             suggestionUids = _gameAccountService.GetSuggestionUids(CurrentGameBiz).Select(x => x.ToString()).ToList();
-            UpdateSuggestionUids(AutoSuggestBox_Uid.Text);
+            //UpdateSuggestionUids(AutoSuggestBox_Uid.Text);
         }
         catch (Exception ex)
         {
@@ -951,24 +951,24 @@ public sealed partial class LauncherPage : PageBase
             {
                 if (string.IsNullOrWhiteSpace(text))
                 {
-                    AutoSuggestBox_Uid.ItemsSource = suggestionUids;
-                    AutoSuggestBox_Uid.IsSuggestionListOpen = true;
+                    //AutoSuggestBox_Uid.ItemsSource = suggestionUids;
+                    //AutoSuggestBox_Uid.IsSuggestionListOpen = true;
                 }
                 else
                 {
                     var list = suggestionUids.Where(x => x != text && x.StartsWith(text)).ToList();
-                    if (list.Count == 0)
-                    {
-                        AutoSuggestBox_Uid.IsSuggestionListOpen = false;
-                    }
-                    else
-                    {
-                        if (!(AutoSuggestBox_Uid.ItemsSource is List<string> source && source.SequenceEqual(list)))
-                        {
-                            AutoSuggestBox_Uid.ItemsSource = list;
-                        }
-                        AutoSuggestBox_Uid.IsSuggestionListOpen = true;
-                    }
+                    //if (list.Count == 0)
+                    //{
+                    //    AutoSuggestBox_Uid.IsSuggestionListOpen = false;
+                    //}
+                    //else
+                    //{
+                    //    if (!(AutoSuggestBox_Uid.ItemsSource is List<string> source && source.SequenceEqual(list)))
+                    //    {
+                    //        AutoSuggestBox_Uid.ItemsSource = list;
+                    //    }
+                    //    AutoSuggestBox_Uid.IsSuggestionListOpen = true;
+                    //}
                 }
             }
         }
