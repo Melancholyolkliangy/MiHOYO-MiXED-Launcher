@@ -47,7 +47,7 @@ public abstract class GachaLogClient
     protected const string REG_KEY_BH3_KR = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\붕괴3rd";
     protected const string REG_KEY_BH3_JP = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\崩壊3rd";
 
-
+    protected const string REG_KEY_LM_CN = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\绿梦";
 
 
     protected readonly HttpClient _httpClient;
@@ -121,6 +121,7 @@ public abstract class GachaLogClient
             GameBiz.bh3_tw => REG_KEY_BH3_TW,
             GameBiz.bh3_kr => REG_KEY_BH3_KR,
             GameBiz.bh3_jp => REG_KEY_BH3_JP,
+            GameBiz.lm_cn => REG_KEY_LM_CN,
             _ => throw new ArgumentOutOfRangeException($"Unknown region {biz}"),
         };
         return GetGameInstallPathFromRegistry(key);

@@ -2612,7 +2612,7 @@ namespace Starward.Language {
         }
         
         /// <summary>
-        ///   查找类似 {Starward} supports some {miHoYo/HoYoverse} games, please select your target below, you can also change it at any time after entering the launcher. 的本地化字符串。
+        ///   查找类似 {Starward} supports some {Bamboo} games, please select your target below, you can also change it at any time after entering the launcher. 的本地化字符串。
         /// </summary>
         public static string SelectGamePage_SomeGame {
             get {

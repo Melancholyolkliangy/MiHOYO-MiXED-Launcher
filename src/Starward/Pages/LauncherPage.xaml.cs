@@ -1128,13 +1128,29 @@ public sealed partial class LauncherPage : PageBase
                 {
                     exe = Path.Combine(AppContext.BaseDirectory, "Starward.exe");
                 }
-                Process.Start(new ProcessStartInfo
+                var p = Process.Start(new ProcessStartInfo
                 {
                     FileName = exe,
                     UseShellExecute = true,
                     Arguments = $"""{(content.EnableRepairMode ? "repair" : "download")} --biz {CurrentGameBiz} --loc "{InstallPath}" --lang {(int)lang} """,
                     Verb = "runas",
                 });
+                if (p != null)
+                {
+                    await p.WaitForExitAsync();
+                    if (p.ExitCode != 0)
+                    {
+                        _logger.LogError("Installation error, exit code {code}", p.ExitCode);
+                        //NotificationBehavior.Instance.Warning(Lang.LauncherPage_installationError, Lang.LauncherPage_PleaseCheckTheRelatedLogs);
+                    }
+                    else
+                    {
+                        _logger.LogInformation("Install finished.");
+                        //NotificationBehavior.Instance.Success(Lang.LauncherPage_UninstallationCompleted);
+                    }
+                    CheckGameVersion();
+                    GetGameAccount();
+                }
             }
         }
         catch (Exception ex)

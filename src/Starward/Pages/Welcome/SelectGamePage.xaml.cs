@@ -44,7 +44,7 @@ public sealed partial class SelectGamePage : PageBase
 
     private void InitializeSomeGame()
     {
-        TextBlockHelper.Inlines(TextBlock_SomeGame.Inlines, Lang.SelectGamePage_SomeGame, ("{Starward}", null), ("{miHoYo/HoYoverse}", null));
+        TextBlockHelper.Inlines(TextBlock_SomeGame.Inlines, Lang.SelectGamePage_SomeGame, ("{Starward}", null), ("{Bamboo}", null));
     }
 
 
